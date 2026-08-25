@@ -4,7 +4,7 @@ WeatherGPT is a full-stack meteorological intelligence and weather analysis appl
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 ### 1. Real-Time Meteorological Telemetry
 - **Hyper-Local Atmospheric Metrics**: Live temperature, feels-like thermal comfort index, relative humidity, barometric pressure (hPa), cloud cover, and UV radiation indexing.
@@ -29,7 +29,7 @@ WeatherGPT is a full-stack meteorological intelligence and weather analysis appl
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Frontend
 - **Framework**: React 19 (TypeScript)
@@ -46,7 +46,7 @@ WeatherGPT is a full-stack meteorological intelligence and weather analysis appl
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 ├── public/
@@ -78,7 +78,7 @@ WeatherGPT is a full-stack meteorological intelligence and weather analysis appl
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - **Node.js**: v18.0.0 or higher
@@ -111,7 +111,7 @@ Open your browser and navigate to `http://localhost:3000`.
 
 ---
 
-## 🚀 Deploying to Vercel (1-Click Deployment)
+## Deploying to Vercel (1-Click Deployment)
 
 This project is pre-configured for instant **Vercel** deployment with serverless API functions and Vite Edge CDN assets:
 
@@ -131,7 +131,7 @@ vercel
 
 ---
 
-## 📦 Production Build (Docker / Node.js Server)
+## Production Build (Docker / Node.js Server)
 
 To build the optimized static client bundle and compile the CommonJS production server:
 
