@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" />
+      <stop offset="100%" stop-color="#141414" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#D1D5DB" />
+    </linearGradient>
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FACC15" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Shield/Rounded Box -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+
+  <!-- Radar Pulse Rings -->
+  <circle cx="32" cy="32" r="24" stroke="#10b981" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="2 4" />
+  <circle cx="32" cy="32" r="16" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.35" />
+
+  <!-- WeatherGPT Glowing Cloud -->
+  <path d="M44 38C46.7614 38 49 35.7614 49 33C49 30.4078 47.0274 28.2771 44.5 28.0329C44.1818 22.9515 39.9575 19 34.8 19C30.6865 19 27.1611 21.5794 25.8 25.25C25.228 25.086 24.6239 25 24 25C20.134 25 17 28.134 17 32C17 35.866 20.134 39 24 39H44" fill="url(#cloudGrad)" filter="url(#glow)" />
+
+  <!-- AI Pulse Spark / Lightning Bolt -->
+  <path d="M33 27L26 37H33L31 47L41 35H34L37 27H33Z" fill="url(#boltGrad)" />
+
+  <!-- Meteorological Radar Sweep Dot -->
+  <circle cx="45" cy="23" r="3" fill="#10b981" />
+  <circle cx="45" cy="23" r="5" stroke="#10b981" stroke-width="1" stroke-opacity="0.6" />
+</svg>

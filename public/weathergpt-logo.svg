@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <defs>
+    <linearGradient id="logoIconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#0A0A0A" />
+    </linearGradient>
+    <linearGradient id="logoCloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+    <linearGradient id="logoBolt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FACC15" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Icon Container -->
+  <g transform="translate(6, 6)">
+    <rect width="48" height="48" rx="12" fill="url(#logoIconBg)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+    <circle cx="24" cy="24" r="18" stroke="#10B981" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="2 3" />
+    <circle cx="24" cy="24" r="11" stroke="#06B6D4" stroke-width="1" stroke-opacity="0.4" />
+    
+    <!-- Cloud -->
+    <path d="M33 28C35.2 28 37 26.2 37 24C37 21.9 35.4 20.2 33.3 20C33.1 15.9 29.7 12.7 25.5 12.7C22.2 12.7 19.3 14.8 18.2 17.8C17.7 17.6 17.2 17.5 16.7 17.5C13.6 17.5 11 20.1 11 23.2C11 26.3 13.6 28.8 16.7 28.8H33" fill="url(#logoCloudGrad)" />
+    
+    <!-- Lightning -->
+    <path d="M25 21L19 29H25L23 37L31 27H26L28 21H25Z" fill="url(#logoBolt)" />
+  </g>
+
+  <!-- Typography -->
+  <text x="66" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">Weather</text>
+  <text x="144" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="url(#textGrad)" letter-spacing="-0.5">GPT</text>
+  
+  <text x="66" y="47" font-family="'JetBrains Mono', monospace, sans-serif" font-size="7.5" font-weight="600" fill="#94A3B8" letter-spacing="1.8">METEOROLOGICAL INTELLIGENCE</text>
+</svg>

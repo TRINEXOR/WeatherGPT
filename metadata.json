@@ -1,0 +1,6 @@
+{
+  "name": "WeatherGPT",
+  "description": "AI-powered meteorological intelligence platform with real-time weather, warnings, and Gemini conversational reasoning.",
+  "requestFramePermissions": ["geolocation", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

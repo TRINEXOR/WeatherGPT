@@ -1,819 +1,147 @@
-# WeatherGPT
+# WeatherGPT — Hyper-Local Meteorological Intelligence Platform
 
-### Hyper-Local Meteorological Intelligence Platform
-
-WeatherGPT is a full-stack meteorological intelligence and weather analysis platform built to bring **real-time weather observations, forecasting, geospatial visualization, environmental monitoring, climate analysis, and actionable weather advisories** into a single interface.
-
-The platform is designed around real meteorological data and provides a conversational way to explore complex weather information.
-
-> **Ask the weather. Understand the risk. Act early.**
+WeatherGPT is a full-stack meteorological intelligence and weather analysis application designed to provide hyper-local real-time observations, multi-spectral geospatial telemetry, predictive microclimate modeling, and actionable agricultural and civil weather advisories.
 
 ---
 
-## Features
+## 🌟 Key Features
 
-### Real-Time Weather Intelligence
+### 1. Real-Time Meteorological Telemetry
+- **Hyper-Local Atmospheric Metrics**: Live temperature, feels-like thermal comfort index, relative humidity, barometric pressure (hPa), cloud cover, and UV radiation indexing.
+- **Precision Wind Telemetry**: Sustained wind velocity, peak gust measurements, and 360° directional compass tracking.
+- **Air Quality Index (AQI)**: Real-time particulate matter analysis ($PM_{2.5}$, $PM_{10}$, $NO_2$, $O_3$, $CO$, $SO_2$) with health risk classifications.
 
-WeatherGPT provides detailed atmospheric conditions for a selected location.
+### 2. Multi-Spectral Geospatial Radar & Satellite Suite
+- **Doppler Radar Reflectivity**: Live high-resolution radar scans with range rings ($50\text{ km}$, $120\text{ km}$, $220\text{ km}$) and dBZ reflectivity gradients for precipitation intensity detection.
+- **Dynamic Thermal Zones**: Regional surface temperature contours and color-coded telemetry badges across national and local weather stations.
+- **Particle Wind Streamline Engine**: Custom HTML5 canvas physics rendering real-time atmospheric particle flow vectors based on live wind velocity and compass bearings.
+- **Satellite Infrared (IR)**: Cloud-top temperature scanning and convective storm cloud detection.
 
-#### Atmospheric Metrics
+### 3. AI Meteorological Advisory & Briefing Assistant
+- **Natural Language Forecasting**: Conversational assistant capable of synthesizing complex meteorological data into clean, structured, and easy-to-read briefings.
+- **Multi-Lingual Capabilities**: Native support for English, Hindi, Marathi, Bengali, Tamil, Telugu, Gujarati, Kannada, Malayalam, Punjabi, and Odia.
+- **Severe Weather Callouts**: Automated categorization of weather alerts, rain probabilities, and commute/travel recommendations.
 
-* Temperature
-* Feels-like temperature
-* Relative humidity
-* Atmospheric pressure
-* Cloud cover
-* UV index
-* Precipitation
-* Weather condition
-
-#### Wind Telemetry
-
-* Wind speed
-* Wind gusts
-* Wind direction
-* Directional visualization
-
-#### Air Quality
-
-Where supported by the data provider:
-
-* PM2.5
-* PM10
-* NO₂
-* O₃
-* CO
-* SO₂
-* AQI
-* Health-risk classification
+### 4. Specialized Sector Modules
+- **Agrometeorological Advisory**: Soil moisture stress analysis, automated irrigation scheduling, crop spraying conditions, and harvest safety windows.
+- **Tropical Cyclone Tracking Center**: Active cyclonic disturbance tracking, central barometric pressure telemetry, storm movement trajectories, and coastal warning bulletins.
+- **7-Day Predictive Modeling**: Interactive temperature curves, precipitation distribution charts, and hourly thermal profiles.
 
 ---
 
-# Geospatial Weather Intelligence
+## 🛠️ Technology Stack
 
-WeatherGPT includes an interactive map for exploring weather conditions geographically.
+### Frontend
+- **Framework**: React 19 (TypeScript)
+- **Styling**: Tailwind CSS v4
+- **Animations**: Motion (`motion/react`)
+- **Mapping & GIS**: Leaflet & React-Leaflet, CartoDB Dark Matter base tiles
+- **Data Visualization**: Recharts & Canvas API
+- **Icons**: Lucide React
 
-### Weather Map
-
-The map interface supports:
-
-* Current location
-* Location search
-* Weather stations
-* Temperature visualization
-* Rainfall information
-* Wind visualization
-* Weather alerts
-* Cyclone information
-* Radar layers
-* Satellite products where available
-
-### Wind Stream Visualization
-
-WeatherGPT uses HTML5 Canvas rendering to visualize wind movement based on available wind speed and directional data.
+### Backend & Middleware
+- **Runtime**: Node.js & Express (TypeScript)
+- **Build & Compilation**: Vite 6, tsx, esbuild
+- **Data Providers**: Open-Meteo API, RainViewer Doppler Tile Feeds, Regional Meteorological Data Networks
 
 ---
 
-# Radar & Precipitation Monitoring
-
-The platform supports real-time radar visualization through available radar data sources.
-
-Features include:
-
-* Radar imagery
-* Precipitation visualization
-* Radar animation
-* Map overlays
-* Geographic navigation
-* Range-based weather exploration
-
-Radar availability depends on the configured data provider and geographic coverage.
-
----
-
-# Satellite Weather Information
-
-The application architecture supports satellite-derived weather products where available.
-
-Potential information includes:
-
-* Infrared imagery
-* Cloud structure
-* Cloud-top temperature
-* Convective activity
-* Storm development
-
-Only available real data products are displayed.
-
----
-
-# Conversational Weather Assistant
-
-WeatherGPT provides a natural-language interface for interacting with meteorological information.
-
-Users can ask:
+## 📂 Project Structure
 
 ```text
-What's the weather in Mumbai right now?
-
-Will it rain tomorrow evening?
-
-What is the temperature this afternoon?
-
-Are there any weather warnings near me?
-
-Is there a cyclone near Maharashtra?
-
-How strong will the wind be tomorrow?
-
-Compare this year's rainfall with previous years.
-
-Explain the forecast in Hindi.
-```
-
-The conversational layer works with retrieved meteorological information rather than treating generated text as a substitute for live weather observations.
-
----
-
-# Multilingual Support
-
-The interface is designed to support multiple Indian languages.
-
-Current language architecture includes:
-
-* English
-* Hindi
-* Marathi
-* Bengali
-* Tamil
-* Telugu
-* Gujarati
-* Kannada
-* Malayalam
-* Punjabi
-* Odia
-
-The language system is designed so additional languages can be introduced without changing the core weather-data architecture.
-
----
-
-# Severe Weather Information
-
-WeatherGPT can organize available severe-weather information into clear categories.
-
-Supported categories include:
-
-* Heavy rainfall
-* Extreme rainfall
-* Thunderstorms
-* Lightning
-* Strong winds
-* Heatwaves
-* Cold waves
-* Cyclones
-* Flood-related weather conditions
-* Coastal weather risks
-
-Where authoritative warning information is available, the source and validity information should be presented clearly.
-
----
-
-# Cyclone Monitoring
-
-The cyclone section provides a dedicated interface for tropical weather systems.
-
-Depending on available data, it can display:
-
-* Cyclone name
-* Current position
-* Wind speed
-* Central pressure
-* Movement direction
-* Movement speed
-* Forecast trajectory
-* Affected areas
-* Coastal warning information
-
-Cyclone information is based on available meteorological data sources.
-
----
-
-# Agriculture Weather Intelligence
-
-WeatherGPT includes a dedicated agricultural weather module.
-
-The module can help analyze:
-
-* Rainfall conditions
-* Irrigation timing
-* Crop spraying conditions
-* Harvest weather windows
-* Temperature conditions
-* Humidity
-* Wind conditions
-* Weather-related agricultural risks
-
-Example:
-
-```text
-Agriculture Advisory
-
-Rainfall is expected during the afternoon.
-
-Consider reviewing irrigation requirements before the expected rainfall
-and avoid spraying immediately before rain.
-
-AI-generated advisory.
-```
-
-Agricultural recommendations are intended as weather-based decision support and should not replace professional agricultural guidance.
-
----
-
-# Forecasting
-
-WeatherGPT provides an interactive forecasting interface.
-
-### Forecast Features
-
-* Current conditions
-* Hourly forecast
-* 24-hour outlook
-* 7-day forecast
-* Temperature trends
-* Rain probability
-* Precipitation totals
-* Wind trends
-* Humidity
-* Sunrise and sunset
-* UV information
-
-Forecast values are retrieved from configured meteorological services.
-
----
-
-# Climate & Historical Analysis
-
-The climate module is designed for historical weather exploration.
-
-Potential analysis includes:
-
-* Historical rainfall
-* Temperature trends
-* Monthly averages
-* Annual averages
-* Rainfall anomalies
-* Temperature anomalies
-* Historical comparisons
-* Long-term weather trends
-
-Example:
-
-```text
-Compare Mumbai rainfall this year
-with the historical average.
-```
-
-Numerical calculations should be performed using structured data rather than generated estimates.
-
----
-
-# Location Intelligence
-
-WeatherGPT supports multiple ways of selecting a location.
-
-### Supported Methods
-
-* City search
-* Town search
-* District search
-* State search
-* Pincode-based search where supported
-* Browser GPS
-* Map selection
-* Latitude and longitude
-
-Example:
-
-```text
-Mumbai
-Pune
-Nashik
-Nagpur
-Bengaluru
-Delhi
-Chennai
-```
-
-The application can also use the browser's geolocation capability to retrieve weather for the user's current position.
-
----
-
-# Voice Interaction
-
-The application architecture supports voice-based interaction.
-
-Basic flow:
-
-```text
-User speaks
-     ↓
-Speech recognition
-     ↓
-Weather query
-     ↓
-Weather data retrieval
-     ↓
-Response generation
-     ↓
-Voice output
-```
-
-This feature is particularly useful for mobile and accessibility-focused use cases.
-
----
-
-# Weather Intelligence Architecture
-
-WeatherGPT follows a data-first architecture.
-
-```text
-                    USER
-                      │
-                      ▼
-             ┌─────────────────┐
-             │  WeatherGPT UI  │
-             └────────┬────────┘
-                      │
-                      ▼
-             ┌─────────────────┐
-             │ Query Processing│
-             └────────┬────────┘
-                      │
-                      ▼
-             ┌─────────────────┐
-             │ Weather Services│
-             └────────┬────────┘
-                      │
-          ┌───────────┼───────────┐
-          │           │           │
-          ▼           ▼           ▼
-      Forecast      Radar       AQI
-       Data         Data        Data
-          │           │           │
-          └───────────┼───────────┘
-                      │
-                      ▼
-             ┌─────────────────┐
-             │ Data Processing │
-             └────────┬────────┘
-                      │
-                      ▼
-             ┌─────────────────┐
-             │ WeatherGPT AI   │
-             │ Interpretation  │
-             └────────┬────────┘
-                      │
-                      ▼
-                 USER RESPONSE
-```
-
----
-
-# Data Integrity
-
-WeatherGPT follows a real-data approach.
-
-The application is designed to:
-
-* Retrieve weather information from external meteorological providers.
-* Preserve provider timestamps where available.
-* Distinguish observations from forecasts.
-* Distinguish official warnings from generated explanations.
-* Handle unavailable provider data gracefully.
-* Avoid presenting unavailable information as current.
-* Keep external API credentials outside the source code.
-
-### No Demo Weather Data
-
-The application does not intentionally substitute fabricated weather values for unavailable live data.
-
-When a required provider is unavailable, the appropriate unavailable/error state should be displayed.
-
----
-
-# Technology Stack
-
-## Frontend
-
-* React 19
-* TypeScript
-* Tailwind CSS
-* Motion
-* Leaflet
-* React-Leaflet
-* Recharts
-* HTML5 Canvas
-* Lucide React
-
-## Backend
-
-* Node.js
-* Express
-* TypeScript
-
-## Build System
-
-* Vite
-* tsx
-* esbuild
-
-## Meteorological Services
-
-* Open-Meteo
-* RainViewer
-* Configurable external meteorological data sources
-
-## Mapping
-
-* Leaflet
-* OpenStreetMap-compatible geographic data
-* Cartographic weather layers
-
-## Deployment
-
-* Vercel
-
----
-
-# Project Structure
-
-```text
-weathergpt/
-│
-├── api/
-│   ├── health.ts
-│   ├── chat.ts
-│   │
-│   ├── weather/
-│   │   ├── current.ts
-│   │   ├── hourly.ts
-│   │   ├── daily.ts
-│   │   └── alerts.ts
-│   │
-│   └── location/
-│       └── search.ts
-│
+├── public/
+│   ├── favicon.svg             # Meteorological SVG favicon
+│   └── weathergpt-logo.svg     # Brand vector asset
 ├── server/
-│   ├── geminiService.ts
-│   ├── weatherService.ts
-│   ├── weatherCodes.ts
-│   ├── locationService.ts
-│   └── alertService.ts
-│
+│   ├── geminiService.ts        # AI meteorological reasoning & briefing engine
+│   └── weatherService.ts       # Open-Meteo & geospatial telemetry service
 ├── src/
 │   ├── components/
-│   │   ├── agriculture/
-│   │   ├── alerts/
-│   │   ├── brand/
-│   │   ├── chat/
-│   │   ├── climate/
-│   │   ├── cyclone/
-│   │   ├── forecast/
-│   │   ├── layout/
-│   │   ├── locations/
-│   │   ├── map/
-│   │   ├── modals/
-│   │   ├── settings/
-│   │   └── weather/
-│   │
-│   ├── data/
-│   ├── types.ts
-│   ├── App.tsx
-│   └── main.tsx
-│
-├── public/
-│   ├── favicon.svg
-│   └── weathergpt-logo.svg
-│
-├── .env.example
-├── .gitignore
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-├── vercel.json
-└── README.md
+│   │   ├── agriculture/        # Agrometeorological advice components
+│   │   ├── alerts/             # Severe weather warning banners
+│   │   ├── brand/              # WeatherGPT logo & identity components
+│   │   ├── chat/               # Conversational briefing panel
+│   │   ├── climate/            # Historical climate & anomaly visualizers
+│   │   ├── cyclone/            # Tropical cyclone tracking center
+│   │   ├── forecast/           # 7-day forecast & hourly analytics
+│   │   ├── layout/             # Header, Navigation, and Sidebar
+│   │   ├── map/                # Doppler Radar, Wind Streams, Thermal Zones
+│   │   └── weather/            # Current metric widgets & AQI cards
+│   ├── data/                   # Indian & global station coordinates
+│   ├── types.ts                # TypeScript interfaces & types
+│   ├── App.tsx                 # Core application controller
+│   └── main.tsx                # Client application entry point
+├── server.ts                   # Express server with Vite middleware
+├── vite.config.ts              # Vite bundler configuration
+└── package.json                # Project dependencies and run scripts
 ```
 
 ---
 
-# Getting Started
+## 🚀 Getting Started
 
-## Requirements
+### Prerequisites
+- **Node.js**: v18.0.0 or higher
+- **npm** or **bun** / **yarn**
 
-Install:
-
-* Node.js 18+
-* npm
-* Git
-
-Verify:
-
-```bash
-node --version
-npm --version
-```
-
----
-
-## Clone the Repository
-
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/your-username/weathergpt.git
-
 cd weathergpt
 ```
 
----
-
-## Install Dependencies
-
+### 2. Install Dependencies
 ```bash
 npm install
 ```
 
----
-
-## Environment Configuration
-
-Create a `.env` file based on `.env.example`.
-
-Example:
-
+### 3. Environment Configuration
+Create a `.env` file in the project root:
 ```env
-GEMINI_API_KEY=your_api_key
+# Optional: Model API Key for conversational meteorological reasoning
+GEMINI_API_KEY=your_api_key_here
 ```
+*(Note: Core weather telemetry, Doppler radar, thermal zones, AQI, and forecasts run fully with real-time public meteorological APIs even without an API key).*
 
-Additional environment variables may be required depending on the configured meteorological services.
-
-Never commit `.env` files containing secrets.
-
----
-
-# Local Development
-
-Start the development server:
-
+### 4. Start Development Server
 ```bash
 npm run dev
 ```
-
-Open the local URL displayed by the development server.
+Open your browser and navigate to `http://localhost:3000`.
 
 ---
 
-# Production Build
+## 🚀 Deploying to Vercel (1-Click Deployment)
 
-Build the application:
+This project is pre-configured for instant **Vercel** deployment with serverless API functions and Vite Edge CDN assets:
+
+### Method 1: Using GitHub & Vercel Dashboard (Recommended)
+1. Push this repository to your **GitHub** account.
+2. Go to [Vercel](https://vercel.com) and click **"Add New Project"**.
+3. Import your GitHub repository.
+4. (Optional) In **Environment Variables**, add:
+   - `GEMINI_API_KEY`: *(Your API key, if using conversational AI)*
+5. Click **"Deploy"**. Vercel will automatically build the React Vite frontend and deploy the `/api` serverless backend functions.
+
+### Method 2: Using Vercel CLI
+```bash
+npm install -g vercel
+vercel
+```
+
+---
+
+## 📦 Production Build (Docker / Node.js Server)
+
+To build the optimized static client bundle and compile the CommonJS production server:
 
 ```bash
 npm run build
-```
-
-Start the production server where applicable:
-
-```bash
 npm start
 ```
 
-For Vercel deployment, the production build is handled by the platform.
-
 ---
 
-# Vercel Deployment
+## 🛡️ License
 
-WeatherGPT is configured for deployment on Vercel.
-
-### Recommended Configuration
-
-```text
-Framework:
-Vite
-
-Build Command:
-npm run build
-
-Output Directory:
-dist
-
-Install Command:
-npm install
-```
-
-### Deployment Steps
-
-1. Push the repository to GitHub.
-2. Open your Vercel dashboard.
-3. Import the repository.
-4. Select the project.
-5. Configure the required environment variables.
-6. Deploy the application.
-
-After deployment, verify:
-
-```text
-/api/health
-/api/weather/current
-/api/weather/hourly
-/api/weather/daily
-/api/weather/alerts
-/api/chat
-```
-
----
-
-# Environment Variables
-
-Example `.env.example`:
-
-```env
-GEMINI_API_KEY=
-
-WEATHER_API_KEY=
-WEATHER_API_BASE_URL=
-
-ALERT_API_KEY=
-ALERT_API_BASE_URL=
-
-GEOCODING_API_KEY=
-GEOCODING_API_BASE_URL=
-```
-
-Only configure variables required by the services used by your deployment.
-
-### Security
-
-Never commit:
-
-```text
-.env
-.env.local
-```
-
-Never expose private API keys in client-side source code.
-
----
-
-# API Endpoints
-
-## Weather
-
-```text
-GET /api/weather/current
-GET /api/weather/hourly
-GET /api/weather/daily
-GET /api/weather/alerts
-```
-
-Example:
-
-```text
-/api/weather/current?lat=19.0760&lon=72.8777
-```
-
----
-
-## Location
-
-```text
-GET /api/location/search
-GET /api/location/reverse
-```
-
----
-
-## Cyclones
-
-```text
-GET /api/cyclones
-```
-
----
-
-## Climate
-
-```text
-GET /api/climate/trends
-```
-
----
-
-## Conversational Assistant
-
-```text
-POST /api/chat
-```
-
----
-
-## Health
-
-```text
-GET /api/health
-```
-
-Example:
-
-```json
-{
-  "status": "ok",
-  "service": "WeatherGPT"
-}
-```
-
----
-
-# Development Checks
-
-Before deployment:
-
-```bash
-npm install
-npm run build
-```
-
-Verify:
-
-* TypeScript compilation
-* Frontend build
-* API routes
-* Weather retrieval
-* Location search
-* Forecast rendering
-* Map rendering
-* Chat functionality
-* Alert handling
-* Responsive layout
-
----
-
-# Security Practices
-
-The project follows basic application security practices including:
-
-* Environment-based secrets
-* Server-side API requests
-* Request validation
-* Error handling
-* Tool parameter validation
-* Protection of private credentials
-* External-data validation
-* Prompt-injection awareness
-* No sensitive credentials in the repository
-
----
-
-# Responsive Interface
-
-WeatherGPT is designed for:
-
-* Mobile phones
-* Tablets
-* Laptops
-* Desktop displays
-
-The interface prioritizes:
-
-* Clear weather information
-* Large interactive controls
-* Accessible navigation
-* Responsive charts
-* Touch-friendly maps
-* Readable alert messages
-* Simple conversational interaction
-
----
-
-# Important Disclaimer
-
-WeatherGPT is intended for **informational and decision-support purposes**.
-
-Weather conditions can change rapidly.
-
-For severe weather, emergency situations, aviation, marine operations, agricultural decisions, and other safety-critical activities, users should consult the appropriate official meteorological authorities and emergency services.
-
-Generated explanations and advisories should not be interpreted as official warnings or guaranteed predictions.
-
----
-
-# License
-
-WeatherGPT is released under the **MIT License**.
-
-See [`LICENSE`](LICENSE) for details.
-
----
-
-# WeatherGPT
-
-**Ask the weather. Understand the risk. Act early.**
+This project is open-source and available under the [MIT License](LICENSE).
