@@ -503,7 +503,7 @@ See the [LICENSE](LICENSE) file for the complete license terms.
 
 ## Author
 
-Developed by **Rahul**
+Developed by **Rahulkumar Jha**
 
 B.Tech Artificial Intelligence and Machine Learning  
 D. Y. Patil University
